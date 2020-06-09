@@ -43,6 +43,14 @@ export default function Days(){
     setTime("days")
     renderContent()
   }
+  const handleMinutesClick = () => {
+    setTime("minutes")
+    renderContent()
+  }
+  const handleSecondsClick = () => {
+    setTime("seconds")
+    renderContent()
+  }
 
   const renderContent = () => {
     if(time == "none"){
@@ -53,6 +61,8 @@ export default function Days(){
             <button onClick={() => handleMonthsClick()}>Months</button>
             <button onClick={() => handleWeeksClick()}>Weeks</button>
             <button onClick={() => handleDaysClick()}>Days</button>
+            <button onClick={() => handleMinutesClick()}>Minutes</button>
+            <button onClick={() => handleSecondsClick()}>Seconds</button>
           </div>
         </div>
       )
