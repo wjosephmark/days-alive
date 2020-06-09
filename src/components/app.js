@@ -31,6 +31,18 @@ export default function Days(){
     setTime("years")
     renderContent()
   }
+  const handleMonthsClick = () => {
+    setTime("months")
+    renderContent()
+  }
+  const handleWeeksClick = () => {
+    setTime("weeks")
+    renderContent()
+  }
+  const handleDaysClick = () => {
+    setTime("days")
+    renderContent()
+  }
 
   const renderContent = () => {
     if(time == "none"){
@@ -38,12 +50,18 @@ export default function Days(){
         <div className="app">
           <div className="buttons">
             <button onClick={() => handleYearsClick()}>Years</button>
+            <button onClick={() => handleMonthsClick()}>Months</button>
+            <button onClick={() => handleWeeksClick()}>Weeks</button>
+            <button onClick={() => handleDaysClick()}>Days</button>
           </div>
         </div>
       )
     } else {
       return(
-        <Moment diff="1976-04-19" unit={time}>{now()}</Moment>
+        <div className="display-wrapper">
+          <Moment diff="1976-04-19" unit={time}>{now()}</Moment>
+        <p>{time}.</p>
+        </div>
       )
     }
   }
