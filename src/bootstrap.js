@@ -13,9 +13,6 @@ const routes = {
 function Main() {
   return(
     <div>
-      <div className="navbar">
-        <A href="/">Home</A>
-      </div>
       {useRoutes(routes)}
     </div>
   )

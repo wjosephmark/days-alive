@@ -55,40 +55,51 @@ export default function Days(){
     if(time == "none"){
       return(
         <div className="app">
+          <div className="content-wrapper">
 
-          <div className="buttons">
-            <button className="btn" onClick={() => handleYearsClick()}>Years</button>
-            <button className="btn" onClick={() => handleMonthsClick()}>Months</button>
-            <button className="btn" onClick={() => handleWeeksClick()}>Weeks</button>
-            <button className="btn" onClick={() => handleDaysClick()}>Days</button>
-            <button className="btn" onClick={() => handleMinutesClick()}>Minutes</button>
-            <button className="btn" onClick={() => handleSecondsClick()}>Seconds</button>
+            <div className="buttons">
+              <button className="btn" onClick={() => handleYearsClick()}>Years</button>
+              <button className="btn" onClick={() => handleMonthsClick()}>Months</button>
+              <button className="btn" onClick={() => handleWeeksClick()}>Weeks</button>
+              <button className="btn" onClick={() => handleDaysClick()}>Days</button>
+              <button className="btn" onClick={() => handleMinutesClick()}>Minutes</button>
+              <button className="btn" onClick={() => handleSecondsClick()}>Seconds</button>
+            </div>
+
+            <form className="form" onSubmit={handleSubmit}>
+                <input type="text" className="input" name="birthday" placeholder="B-Day (YYYY-MM-DD)" onChange={e => setUserBirthday(e.target.value)} />
+            </form>
+
           </div>
-
-          <form className="form" onSubmit={handleSubmit}>
-              <input type="text" name="birthday" placeholder="B-Day (YYYY-MM-DD)" onChange={e => setUserBirthday(e.target.value)} />
-              {/* <button type="submit">Submit</button> */}
-          </form>
 
         </div>
       )
     } else {
       return(
-        <div className="app"> 
+        <div className="app">
 
-          <div className="display-wrapper">
-            <Moment diff={userBirthday} unit={time}>{now()}</Moment>
-            <p>{time}.</p>
+          <div className="content-wrapper">
+
+            <div className="buttons">
+              <button className="btn" onClick={() => handleYearsClick()}>Years</button>
+              <button className="btn" onClick={() => handleMonthsClick()}>Months</button>
+              <button className="btn" onClick={() => handleWeeksClick()}>Weeks</button>
+              <button className="btn" onClick={() => handleDaysClick()}>Days</button>
+              <button className="btn" onClick={() => handleMinutesClick()}>Minutes</button>
+              <button className="btn" onClick={() => handleSecondsClick()}>Seconds</button>
+            </div>
+
+            <div className="display-wrapper">
+              <Moment diff={userBirthday} unit={time}>{now()}</Moment>
+              <p>{time}.</p>
+            </div>
+
+            <div className="reset-button">
+              <button className="btn" onClick={() => setTime("none")}>Reset</button>
+            </div>
+
           </div>
 
-          <div className="buttons">
-            <button className="btn" onClick={() => handleYearsClick()}>Years</button>
-            <button className="btn" onClick={() => handleMonthsClick()}>Months</button>
-            <button className="btn" onClick={() => handleWeeksClick()}>Weeks</button>
-            <button className="btn" onClick={() => handleDaysClick()}>Days</button>
-            <button className="btn" onClick={() => handleMinutesClick()}>Minutes</button>
-            <button className="btn" onClick={() => handleSecondsClick()}>Seconds</button>
-          </div>
 
         </div>
       )
