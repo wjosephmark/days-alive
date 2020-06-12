@@ -4,6 +4,7 @@
 }
 
 .app{
+    font-family: 'Balsamiq Sans', cursive;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,6 +39,57 @@
                 &:hover{
                     cursor: pointer;
                     background-color: rgb(61, 107, 119);
+                }
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+
+        .form{
+            width: 50%;
+            .input{
+                width: 100%;
+                text-align: center;
+                height: 30px;
+                font-size: 15px;
+                background-color: white;
+                border: 2px solid #5497A7;
+                border-radius: 15px;
+            }
+        }
+
+        .display-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p{
+                margin-left: 5px;
+            }
+        }
+
+        .reset-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            .btn{
+                height: 40px;
+                width: 15%;
+                border-radius: 18px;
+                border: none;
+                background-color: #5497A7;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: rgb(61, 107, 119);
+                }
+
+                &:focus{
+                    outline: none;
                 }
             }
         }
