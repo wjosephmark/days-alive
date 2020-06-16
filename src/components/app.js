@@ -68,7 +68,7 @@ export default function Days(){
 
             <div className="example-text">
               <p>
-                Example: 2000/03/23 for March 23rd of 2000.
+                Example: 2000/03/23 for March 23rd of 2000
               </p>
             </div>
 
@@ -85,6 +85,7 @@ export default function Days(){
         <div className="app">
 
           <div className="content-wrapper">
+
 
             <div className="buttons">
               <button className="btn" onClick={() => handleYearsClick()}>Years</button>
