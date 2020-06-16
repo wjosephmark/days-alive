@@ -66,6 +66,12 @@ export default function Days(){
               <button className="btn" onClick={() => handleSecondsClick()}>Seconds</button> */}
             </div>
 
+            <div className="example-text">
+              <p>
+                Example: 2000/03/23 for March 23rd of 2000.
+              </p>
+            </div>
+
             <form className="form" onSubmit={handleSubmit}>
                 <input type="text" className="input" name="birthday" placeholder="B-Day (YYYY-MM-DD)" onChange={e => setUserBirthday(e.target.value)} />
             </form>
