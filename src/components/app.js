@@ -62,8 +62,8 @@ export default function Days(){
               <button className="btn" onClick={() => handleMonthsClick()}>Months</button>
               <button className="btn" onClick={() => handleWeeksClick()}>Weeks</button>
               <button className="btn" onClick={() => handleDaysClick()}>Days</button>
-              <button className="btn" onClick={() => handleMinutesClick()}>Minutes</button>
-              <button className="btn" onClick={() => handleSecondsClick()}>Seconds</button>
+              {/* <button className="btn" onClick={() => handleMinutesClick()}>Minutes</button>
+              <button className="btn" onClick={() => handleSecondsClick()}>Seconds</button> */}
             </div>
 
             <form className="form" onSubmit={handleSubmit}>
@@ -85,8 +85,8 @@ export default function Days(){
               <button className="btn" onClick={() => handleMonthsClick()}>Months</button>
               <button className="btn" onClick={() => handleWeeksClick()}>Weeks</button>
               <button className="btn" onClick={() => handleDaysClick()}>Days</button>
-              <button className="btn" onClick={() => handleMinutesClick()}>Minutes</button>
-              <button className="btn" onClick={() => handleSecondsClick()}>Seconds</button>
+              {/* <button className="btn" onClick={() => handleMinutesClick()}>Minutes</button>
+              <button className="btn" onClick={() => handleSecondsClick()}>Seconds</button> */}
             </div>
 
             <div className="display-wrapper">
